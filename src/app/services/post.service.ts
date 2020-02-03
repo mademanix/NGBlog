@@ -27,30 +27,33 @@ export class PostService {
     getPosts(): Observable<Post[]> {
 
         return of([
-                {
-                    title: 'aaa',
-                    subtitle: 'bbb',
-                    date: 'ccc',
-                    author: 'ddd',
-                    text: 'bbbdddcccaaa',
-                    slug: '123'
-                },
-                {
-                    title: 'aaa',
-                    subtitle: 'bbb',
-                    date: 'ccc',
-                    author: 'ddd',
-                    text: 'bbbdddcccaaa',
-                    slug: '123'
-                },
-                {
-                    title: 'aaa',
-                    subtitle: 'bbb',
-                    date: 'ccc',
-                    author: 'ddd',
-                    text: 'bbbdddcccaaa',
-                    slug: '123'
-                },
+            {
+                title: 'Testowy tytuł',
+                subtitle: 'czyli coś dla mnie xD',
+                hashtags: ['one', 'two', 'three'],
+                date: '2020-02-02',
+                author: 'ludwikmeister',
+                text: `Lorem ipsum dolor sit amet, consectetur adipiscsdsdsing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ullamco laboris nisi ut aliquip ex ea commodo consequat. <!-- read more --> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+                slug: 'testowy-tytul'
+            },
+            {
+                title: 'Testowy tytuł',
+                subtitle: 'czyli coś dla mnie xD',
+                hashtags: ['one', 'two', 'three'],
+                date: '2020-02-02',
+                author: 'ludwikmeister',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                slug: 'testowy-tytul'
+            },
+            {
+                title: 'Testowy tytuł',
+                subtitle: 'czyli coś dla mnie xD',
+                hashtags: ['one', 'two', 'three'],
+                date: '2020-02-02',
+                author: 'ludwikmeister',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                slug: 'testowy-tytul'
+            },
             ]
         );
     }
@@ -65,12 +68,13 @@ export class PostService {
 
         return of([
                 {
-                    title: 'aaa',
-                    subtitle: 'bbb',
-                    date: 'ccc',
-                    author: 'ddd',
-                    text: 'bbbdddcccaaa',
-                    slug: '123'
+                    title: 'Testowy tytuł',
+                    subtitle: 'czyli coś dla mnie xD',
+                    hashtags: ['one', 'two', 'three'],
+                    date: '2020-02-02',
+                    author: 'ludwikmeister',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                    slug: 'testowy-tytul'
                 },
             ]
         )[id];
