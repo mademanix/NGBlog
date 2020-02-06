@@ -1,7 +1,8 @@
 <div id="content" *ngFor="let post of posts">
     <div class="row" style="padding-top: 60px;">
         <div class="article">
-            <h1><a href="{{ post.slug }}">{{ post.title }}</a></h1>
+            <h1><a href="#" (click)="foobar(post.slug)">{{ post.title }}</a></h1>
+<!--            <h1><a href="{{ post.slug }}">{{ post.title }}</a></h1>-->
             <h3>{{ post.subtitle }}</h3>
             <div class="date">
                 {{ post.author }} | {{ post.date }}

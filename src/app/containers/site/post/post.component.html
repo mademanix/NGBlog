@@ -1,1 +1,10 @@
-<p>post works!</p>
+<div class="row" style="padding-top: 60px;">
+    <div class="article">
+        <h1><a href="{{ singlePost.slug }}">{{ singlePost.title }}</a></h1>
+        <h3>{{ singlePost.subtitle }}</h3>
+        <div class="date">
+            {{ singlePost.author }} | {{ singlePost.date }}
+        </div>
+        <p [innerHTML]="singlePost.text"></p>
+    </div>
+</div>

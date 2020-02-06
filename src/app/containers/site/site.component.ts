@@ -22,4 +22,8 @@ export class SiteComponent implements OnInit {
                 }
             });
     }
+
+    foobar(id: string) {
+        console.log(id);
+    }
 }
