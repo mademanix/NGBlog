@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {Post} from '../../interfaces/post';
-import {PostService} from '../../services/post.service';
+import { Post } from '../../interfaces/post';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
-  selector: 'app-site',
-  templateUrl: './site.component.html',
-  styleUrls: ['./site.component.sass']
+    selector: 'app-post',
+    templateUrl: './post.component.html',
+    styleUrls: ['./post.component.sass']
 })
-export class SiteComponent implements OnInit {
+export class PostComponent implements OnInit {
 
     posts: Post[] = [];
 
@@ -26,4 +26,5 @@ export class SiteComponent implements OnInit {
     foobar(id: string) {
         console.log(id);
     }
+
 }
