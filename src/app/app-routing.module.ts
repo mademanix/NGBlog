@@ -12,8 +12,8 @@ const routes: Routes = [];
     CommonModule,
     RouterModule.forRoot([
       { path: 'home', component: SiteComponent },
-      { path: 'items', component: SiteComponent },
-      { path: 'items/:id', component: PostComponent },
+      { path: 'blog', component: SiteComponent },
+      { path: ':id', component: SiteComponent },
       { path: '**', redirectTo: 'home' }
     ])
   ],
