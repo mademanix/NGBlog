@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import {Post} from '../interfaces/post';
-import {PostService} from '../services/post.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Post } from '../interfaces/post';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-site',
   templateUrl: './site.component.html',
   styleUrls: ['./site.component.sass']
 })
-export class SiteComponent implements OnInit {
+export class SiteComponent implements OnInit, OnDestroy {
 
     posts: Post[] = [];
 
@@ -21,6 +21,11 @@ export class SiteComponent implements OnInit {
                     this.posts.push(post);
                 }
             });
+    }
+
+    ngOnDestroy(): void {
+
+        this.posts.length = 0;
     }
 
     foobar(id: string) {

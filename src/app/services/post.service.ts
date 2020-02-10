@@ -1,12 +1,13 @@
-import {Injectable} from '@angular/core';
-import {Post} from '../interfaces/post';
-import {Observable, of} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Post } from '../interfaces/post';
+import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
     providedIn: 'root'
 })
 export class PostService {
+
 
     constructor(private http: HttpClient) {
     }
@@ -24,7 +25,7 @@ export class PostService {
     //         .get<Post[]>('http://localhost:4200');
     // }
 
-    getPosts(): Observable<Post[]> {
+    getPosts(id?: number): Observable<Post[]> {
 
         return of([
             {
@@ -63,20 +64,4 @@ export class PostService {
         // return this.http
         //         .get<Post>('http://localhost:4200/${id}');
     // }
-
-    getPost(id: number) {
-
-        return of([
-                {
-                    title: 'Testowy tytuł',
-                    subtitle: 'czyli coś dla mnie xD',
-                    hashtags: ['one', 'two', 'three'],
-                    date: '2020-02-02',
-                    author: 'ludwikmeister',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    slug: 'testowy-tytul'
-                },
-            ]
-        )[id];
-    }
 }

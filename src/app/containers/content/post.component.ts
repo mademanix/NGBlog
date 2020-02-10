@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { Post } from '../../interfaces/post';
 import { PostService } from 'src/app/services/post.service';
 
@@ -9,18 +9,15 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class PostComponent implements OnInit {
 
-    posts: Post[] = [];
+    @Input() content: Post[] = [];
 
-    constructor(private postService: PostService) {
+    constructor() {
     }
 
-    ngOnInit() {
-        this.postService.getPosts()
-            .subscribe((data) => {
-                for (const post of data) {
-                    this.posts.push(post);
-                }
-            });
+    ngOnInit(): void {
+
+        console.log(this.content);
+
     }
 
     foobar(id: string) {
