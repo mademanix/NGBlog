@@ -7,5 +7,6 @@ export class Appsetting {
 
 export class Api {
 
+    public static GET_POSTS = Appsetting.API_ENDPOINT + Appsetting.API_POSTS;
     public static GET_ONE_POST = Appsetting.API_ENDPOINT + Appsetting.API_ONE_POST;
 }

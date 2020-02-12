@@ -7,7 +7,7 @@
             <div class="date">
                 {{ post.author }} | {{ post.date }}
             </div>
-            <p [innerHTML]="post.text | readMore: post.slug"></p>
+            <p [innerHTML]="content.length > 1 ? (post.text | readMore: post.slug) : post.text"></p>
         </div>
     </div>
 </div>

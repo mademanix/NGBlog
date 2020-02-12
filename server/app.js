@@ -2,10 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const mysql = require('mysql');
+const config = require('./config.js/index.js')
  
 // parse application/json
 app.use(bodyParser.json());
- 
+
 //create database connection
 const conn = mysql.createConnection({
   host: '####',

@@ -11,10 +11,10 @@ const routes: Routes = [];
   imports: [
     CommonModule,
     RouterModule.forRoot([
-      { path: 'home', component: SiteComponent },
-      { path: 'blog', component: SiteComponent },
-      { path: ':id', component: SiteComponent },
-      { path: '**', redirectTo: 'home' }
+      // { path: 'home', component: SiteComponent },
+      { path: 'posts', component: SiteComponent },
+      { path: 'post/:id', component: SiteComponent },
+      { path: '**', redirectTo: 'post' }
     ])
   ],
   exports: [RouterModule]
