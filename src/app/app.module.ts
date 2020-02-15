@@ -11,6 +11,7 @@ import { SplashscreenComponent } from './containers/splashscreen/splashscreen.co
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ReadMorePipe } from './pipes/read-more.pipe';
 import { PostComponent } from './containers/content/post.component';
+import { AboutComponent } from './containers/content/about/about.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PostComponent } from './containers/content/post.component';
       SiteComponent,
       SplashscreenComponent,
       ReadMorePipe,
-      PostComponent
+      PostComponent,
+      AboutComponent
   ],
   imports: [
       BrowserModule,

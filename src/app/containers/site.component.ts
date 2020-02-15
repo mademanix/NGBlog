@@ -18,8 +18,7 @@ export class SiteComponent implements OnInit, OnDestroy {
         private postService: PostService,
         private route: ActivatedRoute
         ) {
-            this.url = this.route.snapshot.url.join('') || '';
-            // this.url = 'testowy-tytul' || '';
+            this.url = this.route.snapshot.url[this.route.snapshot.url.length - 1].toString() || 'posts';
         }
 
     ngOnInit() {
@@ -38,6 +37,5 @@ export class SiteComponent implements OnInit, OnDestroy {
     }
 
     foobar(id: string) {
-        console.log(id);
     }
 }

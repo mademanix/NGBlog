@@ -29,10 +29,8 @@ export class PostService {
 
     getPosts(id?: string): Observable<Post[]> {
 
-        console.log(id);
-
         // lol xD
-        id = (id === 'home' ? '' : id);
+        id = (id === 'posts' ? '' : id);
 
         const array = [
             {

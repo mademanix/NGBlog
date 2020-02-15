@@ -1,9 +1,9 @@
+import { Appsetting, Api } from './const/appsetting.const';
 import { PostComponent } from './containers/content/post.component';
 import { SiteComponent } from './containers/site.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
 
 const routes: Routes = [];
 
@@ -12,11 +12,12 @@ const routes: Routes = [];
     CommonModule,
     RouterModule.forRoot([
       // { path: 'home', component: SiteComponent },
-      { path: 'posts', component: SiteComponent },
-      { path: 'post/:id', component: SiteComponent },
-      { path: '**', redirectTo: 'post' }
+      { path: Appsetting.API_POSTS, component: SiteComponent },
+      { path: Appsetting.API_ONE_POST + ':id', component: SiteComponent },
+      { path: Appsetting.API_ONE_POST + ':id', component: SiteComponent },
+      { path: '**', redirectTo: Appsetting.API_POSTS }
     ])
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

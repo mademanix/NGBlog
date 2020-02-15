@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Api} from '../interfaces/appsetting';
+import {Api} from '../const/appsetting.const';
 
 @Pipe({
     name: 'readMore'
