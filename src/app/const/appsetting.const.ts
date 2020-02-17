@@ -1,8 +1,12 @@
-import { PROD } from './environment-prod.const';
+import { ENVIRONMENT } from '../environment';
+
+// TODO code improvement - best performance
 
 export class Appsetting {
 
-    public static API_ENDPOINT = PROD.APP_ROOT + (PROD.APP_PORT === 8080 || PROD.APP_PORT === 80 ? '' : ':' + PROD.APP_PORT);
+    public static API_ENDPOINT = ENVIRONMENT.APP_ROOT +
+                                 (ENVIRONMENT.APP_PORT === 8080 || ENVIRONMENT.APP_PORT === 80 ? '' : ':' + ENVIRONMENT.APP_PORT)
+                                 + '/';
     public static API_POSTS = 'posts';
     public static API_ONE_POST = 'post/';
     public static API_ABOUT = 'about/';
