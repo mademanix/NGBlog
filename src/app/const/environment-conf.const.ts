@@ -1,17 +1,16 @@
-export class PROD {
+export const ENV = {
+    PROD: {
+        APP_ROOT: 'http://localhost:4200/',
+        API_MYSQL_ROOT: 'http://localhost:3000/api'
+    },
 
-    public static APP_ROOT = 'http://localhost';
-    public static APP_PORT = 4200;
-}
+    DEV: {
+        APP_ROOT: 'http://localhost:4200/',
+        API_MYSQL_ROOT: 'http://localhost:3000/api'
+    },
 
-export class DEV {
-
-    public static APP_ROOT = 'http://localhost';
-    public static APP_PORT = 4200;
-}
-
-export class TST {
-
-    public static APP_ROOT = 'http://localhost';
-    public static APP_PORT = 4200;
-}
+    TST: {
+        APP_ROOT: 'http://localhost:4200/',
+        API_MYSQL_ROOT: 'http://localhost:3000/api'
+    }
+};

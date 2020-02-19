@@ -5,19 +5,25 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'posts', component: SiteComponent },
+  { path: Appsetting.ONE_POST + ':id', component: SiteComponent },
+  { path: '**', redirectTo: 'posts' }
+];
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forRoot([
-      // { path: 'home', component: SiteComponent },
-      { path: Appsetting.API_POSTS, component: SiteComponent },
-      { path: Appsetting.API_ONE_POST + ':id', component: SiteComponent },
-      { path: Appsetting.API_ONE_POST + ':id', component: SiteComponent },
-      { path: '**', redirectTo: Appsetting.API_POSTS }
+      ...routes
     ])
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+
+  constructor() {
+    console.log(routes);
+  }
+
+}

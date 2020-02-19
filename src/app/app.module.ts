@@ -1,3 +1,4 @@
+import { Appsetting, Api } from './const/appsetting.const';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -12,6 +13,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ReadMorePipe } from './pipes/read-more.pipe';
 import { PostComponent } from './containers/content/post.component';
 import { AboutComponent } from './containers/content/about/about.component';
+import { DateFormatPipe } from './pipes/date-format.pipe';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,13 @@ import { AboutComponent } from './containers/content/about/about.component';
       SplashscreenComponent,
       ReadMorePipe,
       PostComponent,
-      AboutComponent
+      AboutComponent,
+      DateFormatPipe
   ],
   imports: [
       BrowserModule,
+      // Api,
+      // Appsetting,
       AppRoutingModule,
       HttpClientModule,
       AngularFontAwesomeModule,
