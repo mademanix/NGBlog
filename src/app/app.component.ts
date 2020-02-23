@@ -14,7 +14,6 @@ export class AppComponent {
     private titleService: Title,
     private route: ActivatedRoute
   ) {
-    console.log(this.route.url);
     this.titleService.setTitle(this.title);
   }
 }

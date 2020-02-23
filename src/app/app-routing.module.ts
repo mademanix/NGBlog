@@ -1,3 +1,4 @@
+import { PostResolverService } from './services/resolvers/post-resolver.service';
 import { Appsetting, Api } from './const/appsetting.const';
 import { PostComponent } from './containers/content/post.component';
 import { SiteComponent } from './containers/site.component';
@@ -6,9 +7,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  { path: 'posts', component: SiteComponent },
-  { path: Appsetting.ONE_POST + ':id', component: SiteComponent },
-  { path: '**', redirectTo: 'posts' }
+  {
+    path: 'posts',
+    component: SiteComponent,
+    resolve: {
+      posts: PostResolverService
+    }
+  },
+  {
+    path: Appsetting.ONE_POST + ':id',
+    component: SiteComponent,
+    resolve: { posts: PostResolverService }
+  },
+  {
+    path: '**',
+    redirectTo: 'posts'
+  }
 ];
 
 @NgModule({
@@ -20,10 +34,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-
-  constructor() {
-    console.log(routes);
-  }
-
-}
+export class AppRoutingModule {}

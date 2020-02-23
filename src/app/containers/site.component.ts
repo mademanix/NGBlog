@@ -16,22 +16,14 @@ export class SiteComponent implements OnInit, OnDestroy {
 
     private url: string;
     constructor(
-        private postService: PostService,
         private route: ActivatedRoute
         ) {
             this.url = this.route.snapshot.url[this.route.snapshot.url.length - 1].toString() || 'posts';
-            console.log(this.url);
         }
 
-    ngOnInit() {
+    ngOnInit(): void {
 
-        this.postService.getPosts(this.url)
-            .pipe(map(data => data.response))
-            .subscribe((data) => {
-                for (const post of data) {
-                    this.posts.push(post);
-                }
-            });
+        this.posts = this.route.snapshot.data.posts.response;
     }
 
     ngOnDestroy(): void {

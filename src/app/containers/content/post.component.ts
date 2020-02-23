@@ -14,11 +14,9 @@ export class PostComponent implements OnInit {
     }
 
     ngOnInit(): void {
-
     }
 
     foobar(id: string) {
-        console.log(id);
     }
 
 }
