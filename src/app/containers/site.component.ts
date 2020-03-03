@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Post } from '../interfaces/post';
 import { PostService } from '../services/post.service';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-site',
@@ -15,20 +16,14 @@ export class SiteComponent implements OnInit, OnDestroy {
 
     private url: string;
     constructor(
-        private postService: PostService,
         private route: ActivatedRoute
         ) {
             this.url = this.route.snapshot.url[this.route.snapshot.url.length - 1].toString() || 'posts';
         }
 
-    ngOnInit() {
+    ngOnInit(): void {
 
-        this.postService.getPosts(this.url)
-            .subscribe((data) => {
-                for (const post of data) {
-                    this.posts.push(post);
-                }
-            });
+        this.posts = this.route.snapshot.data.posts.response;
     }
 
     ngOnDestroy(): void {

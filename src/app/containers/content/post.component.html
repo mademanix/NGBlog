@@ -2,10 +2,9 @@
     <div class="row" style="padding-top: 60px;">
         <div class="article">
             <h1><a href="post/{{ post.slug }}" (click)="foobar(post.slug)">{{ post.title }}</a></h1>
-<!--            <h1><a href="{{ post.slug }}">{{ post.title }}</a></h1>-->
             <h3>{{ post.subtitle }}</h3>
             <div class="date">
-                {{ post.author }} | {{ post.date }}
+                {{ post.author }} | {{ post.date | dateFormat }}
             </div>
             <p [innerHTML]="content.length > 1 ? (post.text | readMore: post.slug) : post.text"></p>
         </div>
