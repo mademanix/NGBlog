@@ -1,7 +1,7 @@
 import { PostResolverService } from './services/resolvers/post-resolver.service';
 import { Appsetting, Api } from './const/appsetting.const';
-import { PostComponent } from './containers/content/post.component';
-import { SiteComponent } from './containers/site.component';
+import { PostComponent } from './page/content/post.component';
+import { SiteComponent } from './page/site.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
