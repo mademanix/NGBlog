@@ -1,5 +1,4 @@
-import { PostService } from './../post.service';
-import { Observable } from 'rxjs';
+import { PostService } from '../post.service';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 

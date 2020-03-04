@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Post } from '../interfaces/post';
-import { Observable, of } from 'rxjs';
+import { Post } from '../../utils/interfaces/post';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Api } from '../const/appsetting.const';
+import { Api } from '../../utils/const/appsetting.const';
 
 @Injectable({
     providedIn: 'root'
 })
 export class PostService {
 
-
-    returnPost: Post[] = [];
+    // returnPost: Post[] = [];
 
     constructor(private http: HttpClient) {
     }

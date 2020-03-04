@@ -1,9 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Post } from '../interfaces/post';
-import { PostService } from '../services/post.service';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
+import { Post } from '../../utils/interfaces/post';
 
 @Component({
   selector: 'app-site',
@@ -29,8 +26,5 @@ export class SiteComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
 
         this.posts.length = 0;
-    }
-
-    foobar(id: string) {
     }
 }

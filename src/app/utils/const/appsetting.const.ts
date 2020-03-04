@@ -1,4 +1,4 @@
-import { ENVIRONMENT } from '../environment';
+import { ENVIRONMENT } from '../../environment';
 
 export class Appsetting {
 

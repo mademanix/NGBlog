@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddContentComponent } from './add-content/add-content.component';
+import { AddContentComponent } from './containers/add-content/add-content.component';
+import { EditContentComponent } from './containers/edit-content/edit-content.component';
 
 
 
 @NgModule({
-  declarations: [AddContentComponent],
+  declarations: [AddContentComponent, EditContentComponent],
   imports: [
     CommonModule
   ]

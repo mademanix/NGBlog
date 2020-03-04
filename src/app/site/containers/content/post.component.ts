@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
-import { Post } from '../../interfaces/post';
+import { Component, OnInit, Input } from '@angular/core';
+import { Post } from '../../../utils/interfaces/post';
 
 @Component({
     selector: 'app-post',
@@ -15,8 +15,4 @@ export class PostComponent implements OnInit {
 
     ngOnInit(): void {
     }
-
-    foobar(id: string) {
-    }
-
 }
