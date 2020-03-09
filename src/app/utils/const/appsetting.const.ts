@@ -7,6 +7,7 @@ export class Appsetting {
     public static ONE_POST = 'post/';
     public static ABOUT = 'about/';
     public static API_MYSQL_ENDPOINT = ENVIRONMENT.API_MYSQL_ROOT;
+    public static API_CMS = 'cms';
 }
 
 export class Api {
