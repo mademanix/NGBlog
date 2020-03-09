@@ -8,6 +8,7 @@ import { HeaderComponent } from './containers/header/header.component';
 import { SplashscreenComponent } from './containers/splashscreen/splashscreen.component';
 import { ReadMorePipe } from './pipes/read-more.pipe';
 import { DateFormatPipe } from './pipes/date-format.pipe';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 const CONTAINERS = [
     SiteComponent,
@@ -29,7 +30,8 @@ const PIPES = [
         ...PIPES
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        ScrollToModule
     ],
     exports: [
 
