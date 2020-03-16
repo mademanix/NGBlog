@@ -1,25 +1,46 @@
-.navbar
-    background-color: #313131
-    border: none
-    background-color: rgba(0, 0, 0, 0)
-    -webkit-transition: all ease .6s
-    -moz-transition: all ease .6s
-    -o-transition: all ease .6s
-    transition: all ease .6s
+// **********************************
 
-nav
-    font-family: 'Open Sans', sans-serif
-    font-size: 24px
+$tablet-width: 768px
+$desktop-width: 992px
 
-.navbar-default .navbar-nav > li > a
-    color: white
-    margin-left: 20px
+// **********************************
 
-.navbar-default .navbar-nav > li > a:hover
-    color: black
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap')
 
-.square-bracket:before
-    content: "[ "
+@mixin tablet
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+        @content
 
-.square-bracket:after
-    content: " ]"
+@mixin desktop
+    @media (min-width: #{$desktop-width})
+        @content
+
+header
+    display: flex
+    font-size: 12pt
+    flex-direction: row
+    font-family: 'Ubuntu', sans-serif
+    padding: 10px 0 10px 0
+
+    @include tablet
+        font-size: 16pt
+        flex-direction: row
+
+    @include desktop
+        font-size: 20pt
+        position: fixed
+        top: 20%
+        flex-direction: column
+
+    a
+        display: flex
+        margin-left: 30px
+        text-decoration: none
+        color: #eaeaea
+
+    a:hover
+        color: #0092e0
+        transition: 0.3s ease
+
+
+

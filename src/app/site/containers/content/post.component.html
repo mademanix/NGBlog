@@ -1,12 +1,17 @@
 <div id="content" *ngFor="let post of content">
-    <div class="row" style="padding-top: 60px;">
-        <div class="article">
+    <div class="row">
+        <article>
             <h1><a href="post/{{ post.slug }}">{{ post.title }}</a></h1>
             <h3>{{ post.subtitle }}</h3>
             <div class="date">
-                {{ post.author }} | {{ post.date | dateFormat }}
+                <ng-template [ngIf]="mobileView" [ngIfElse]="authorAndDateInOneLine">
+                    {{ post.author }} <br/> {{ post.date | dateFormat }}
+                </ng-template>
+                <ng-template #authorAndDateInOneLine>
+                    {{ post.author }} | {{ post.date | dateFormat }}
+                </ng-template>
             </div>
             <p [innerHTML]="content.length > 1 ? (post.text | readMore: post.slug) : post.text"></p>
-        </div>
+        </article>
     </div>
 </div>

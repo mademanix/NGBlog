@@ -1,3 +1,5 @@
+import { FooterComponent } from './../site/containers/footer/footer.component';
+import { HeaderComponent } from './../site/containers/header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -11,7 +13,11 @@ import { CmsModule } from '../cms/cms.module';
 
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,

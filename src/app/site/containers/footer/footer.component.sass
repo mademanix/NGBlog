@@ -1,4 +1,40 @@
-#sticky-footer
-    font-size: 1.4em
+// **********************************
 
-/* Other Classes for Page Styling */
+$tablet-width: 768px
+$desktop-width: 992px
+
+// **********************************
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap')
+
+@mixin tablet
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+        @content
+
+@mixin desktop
+    @media (min-width: #{$desktop-width})
+        @content
+
+
+footer
+    display: none
+    color: #eaeaea
+    font-size: 12pt
+    font-family: 'Ubuntu', sans-serif
+
+    @include tablet
+        font-size: 16pt
+        flex-direction: row
+
+
+    @include desktop
+        display: flex
+        font-size: 20pt
+        position: fixed
+        top: 90%
+
+    .credentials
+        text-decoration: none
+        color: #eaeaea
+        margin-left: 30px
+
