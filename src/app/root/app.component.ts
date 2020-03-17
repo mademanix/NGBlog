@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -7,12 +8,22 @@ import { Title } from '@angular/platform-browser';
     styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-    title = '[ rttd blog - ludwikmeister ]';
 
     constructor(
         private titleService: Title,
-        // private route: ActivatedRoute
+        private route: ActivatedRoute
     ) {
-        this.titleService.setTitle(this.title);
+        this.titleService.setTitle(`[ rttd ${this.setTitle()} - ludwikmeister ]`);
+    }
+
+    private setTitle(): string {
+
+        if (this.route.url.toString().includes('about')) {
+            return 'about';
+        } else if (this.route.url.toString().includes('post')) {
+            return 'blog';
+        } else {
+            return 'yeet';
+        }
     }
 }

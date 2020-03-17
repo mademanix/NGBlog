@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.sass']
+    selector: 'app-about',
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.sass']
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+    private windows = `lol did you really don't know what is Windows? xD`;
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
 
+    ngOnInit() {
+    }
+
+    public lolWindowsReally() {
+        return this.windows;
+    }
 }

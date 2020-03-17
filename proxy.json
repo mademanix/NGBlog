@@ -1,6 +1,11 @@
 {
     "/api/*": {
-        "target": "http://localhost:3000",
-        "secure": "false"
+        "target": "http://api.ludwikmeister.pl:8080",
+        "secure": "false",
+        "logLevel": "debug",
+        "changeOrigin": "true",
+        "pathRewrite": {
+            "^/api": ""
+        }
     }
 }

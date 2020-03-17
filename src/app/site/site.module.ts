@@ -6,6 +6,7 @@ import { AboutComponent } from './containers/content/about/about.component';
 import { ReadMorePipe } from './pipes/read-more.pipe';
 import { DateFormatPipe } from './pipes/date-format.pipe';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { AppRoutingModule } from '../root/app-routing.module';
 
 const CONTAINERS = [
     SiteComponent,
@@ -25,7 +26,8 @@ const PIPES = [
     ],
     imports: [
         CommonModule,
-        ScrollToModule
+        ScrollToModule,
+        AppRoutingModule
     ],
     exports: [
 

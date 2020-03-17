@@ -10,7 +10,7 @@ export class PostComponent implements OnInit {
 
     @Input() content: Post[] = [];
 
-    private mobileView;
+    public mobileView;
     private tabletWidthValue = 1200;
     constructor() {
     }
@@ -19,7 +19,7 @@ export class PostComponent implements OnInit {
         this.mobileView = window.screen.width < this.tabletWidthValue;
     }
 
-    @HostListener('window:resize', ['$event'])
+    @HostListener('window:resize', [])
     onResize() {
         this.mobileView = window.screen.width < this.tabletWidthValue;
     }
