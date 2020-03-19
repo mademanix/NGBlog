@@ -1,5 +1,5 @@
-import { FooterComponent } from './../site/containers/footer/footer.component';
-import { HeaderComponent } from './../site/containers/header/header.component';
+import { FooterComponent } from '../site/containers/footer/footer.component';
+import { HeaderComponent } from '../site/containers/header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -9,7 +9,6 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SiteModule } from '../site/site.module';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { AppComponent } from './app.component';
-import { CmsModule } from '../cms/cms.module';
 
 
 @NgModule({
@@ -24,13 +23,11 @@ import { CmsModule } from '../cms/cms.module';
         HttpClientModule,
         AngularFontAwesomeModule,
         SiteModule,
-        CmsModule,
         NgbModule,
         ScrollToModule.forRoot()
     ],
     exports: [
         SiteModule,
-        CmsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-about',
@@ -7,15 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-    private windows = `lol did you really don't know what is Windows? xD`;
+    constructor(private titleService: Title) {
 
-    constructor() {
+        this.titleService.setTitle('[ rttd about - ludwikmeister ]');
     }
 
     ngOnInit() {
-    }
-
-    public lolWindowsReally() {
-        return this.windows;
     }
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
-import { Post } from '../../../utils/interfaces/post';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Post } from '../../../../utils/interfaces/post';
+import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-post',
@@ -12,7 +13,10 @@ export class PostComponent implements OnInit {
 
     public mobileView;
     private tabletWidthValue = 1200;
-    constructor() {
+
+    constructor(private titleService: Title) {
+
+        this.titleService.setTitle('[ rttd blog - ludwikmeister ]');
     }
 
     ngOnInit(): void {

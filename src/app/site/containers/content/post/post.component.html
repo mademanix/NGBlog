@@ -1,7 +1,7 @@
-<div id="content" *ngFor="let post of content">
+<div id="content" *ngFor="let post of content.slice().reverse()">
     <div class="row">
         <article>
-            <h1><a href="post/{{ post.slug }}">{{ post.title }}</a></h1>
+            <h1><a routerLink="/post/{{ post.slug }}">{{ post.title }}</a></h1>
             <h3>{{ post.subtitle }}</h3>
             <div class="date">
                 <ng-template [ngIf]="mobileView" [ngIfElse]="authorAndDateInOneLine">
